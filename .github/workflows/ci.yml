@@ -8,6 +8,7 @@ jobs:
             - uses: actions/setup-node@v4
               with:
                 node-version: 18
-            - uses: gh640/npm-outdated-action@v1
+            - uses: MeilCli/npm-update-check-action@v4
+              id: outdated
             - run: npm ci
             - run: npm test
