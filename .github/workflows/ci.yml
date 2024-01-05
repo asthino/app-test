@@ -8,8 +8,8 @@ jobs:
             - uses: actions/setup-node@v4
               with:
                 node-version: 18
-            - uses: MeilCli/npm-update-check-action@v4
-              id: outdated
-            - run: echo ${{steps.outdated.outputs.npm_update_text}} >> $GITHUB_STEP_SUMMARY
+            # - uses: MeilCli/npm-update-check-action@v4
+            #   id: outdated
+            # - run: echo ${{steps.outdated.outputs.npm_update_text}} >> $GITHUB_STEP_SUMMARY
             - run: npm ci
             - run: npm test
