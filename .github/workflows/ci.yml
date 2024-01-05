@@ -12,4 +12,4 @@ jobs:
               id: outdated
             - run: echo ${{steps.outdated.outputs.npm_update_text}} >> $GITHUB_STEP_SUMMARY
             - run: npm ci
-            - run: npm run test
+            - run: npm test
